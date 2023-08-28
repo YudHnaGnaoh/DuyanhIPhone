@@ -107,9 +107,6 @@ function logout() {
                 window.location.reload();
             })
         }
-        else{
-          window.location.replace("index.html")
-        }
     });
 }
 //------------------------------------------------------------------------------------
@@ -159,7 +156,7 @@ $(".clearBtn").click(function (e) {
 function getData() {
     const params = new URLSearchParams(window.location.search);
     if (!params.has("id")) {
-        alert("ko có sản phẩm")
+        window.location.replace("index.html")
     }
     var id = params.get("id");
     var page = 1;

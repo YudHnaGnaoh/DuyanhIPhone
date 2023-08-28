@@ -110,9 +110,6 @@ $(document).ready(function () {
           window.location.reload();
         })
       }
-      else{
-        window.location.replace("index.html")
-      }
     });
   }
   //------------------------------------------------------------------------------------
@@ -176,8 +173,14 @@ $(document).ready(function () {
                     $("#bills").removeClass("hideclass");
                     billsdetail()
                 }
+                else {
+                  window.location.replace("index.html")
+                }
             }
         });
+    }
+    else {
+      window.location.replace("index.html")
     }
   }
   //------------------------------------------------------------------------------------

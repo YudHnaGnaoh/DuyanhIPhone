@@ -109,10 +109,45 @@ function logout() {
         window.location.reload();
       })
     }
-    else{
-      window.location.replace("index.html")
-    }
   });
+}
+//------------------------------------------------------------------------------------
+function loadDataNavbar() {
+  $("#logoutBtn").hide();
+  if (localStorage.getItem("token") && localStorage.getItem("token") != null) {
+    $("#logoutBtn").show();
+    $("#loginBtn").hide()
+    $.ajax({
+      type: "GET",
+      url: "https://students.trungthanhweb.com/api/home",
+      data: {
+        apitoken: localStorage.getItem("token"),
+      },
+      dataType: "JSON",
+      success: function (res) {
+        const brands = res.brands;
+        const categrories = res.categrories;
+        if (brands.length > 0) {
+          var str = ""
+          brands.forEach(el => {
+            str += `
+                        <li><a class="dropdown-item" href="brand.html?id=`+ el.id + `">`+ el.name + `</a></li>
+                        `
+          });
+          $("#brandUL").html(str);
+        }
+        if (categrories.length > 0) {
+          var str = ""
+          categrories.forEach(el => {
+            str += `
+                        <li><a class="dropdown-item" href="cate.html?id=`+ el.id + `">`+ el.name + `</a></li>
+                        `
+          });
+          $("#cateUL").html(str);
+        }
+      }
+    })
+  }
 }
 //------------------------------------------------------------------------------------
 function getData() {
@@ -228,44 +263,6 @@ function clickimage() {
     var src = $(this).attr("src")
     $("#productimage").attr("src", src);
   });
-}
-//------------------------------------------------------------------------------------
-function loadDataNavbar() {
-  $("#logoutBtn").hide();
-  if (localStorage.getItem("token") && localStorage.getItem("token") != null) {
-    $("#logoutBtn").show();
-    $("#loginBtn").hide()
-    $.ajax({
-      type: "GET",
-      url: "https://students.trungthanhweb.com/api/home",
-      data: {
-        apitoken: localStorage.getItem("token"),
-      },
-      dataType: "JSON",
-      success: function (res) {
-        const brands = res.brands;
-        const categrories = res.categrories;
-        if (brands.length > 0) {
-          var str = ""
-          brands.forEach(el => {
-            str += `
-                        <li><a class="dropdown-item" href="brand.html?id=`+ el.id + `">`+ el.name + `</a></li>
-                        `
-          });
-          $("#brandUL").html(str);
-        }
-        if (categrories.length > 0) {
-          var str = ""
-          categrories.forEach(el => {
-            str += `
-                        <li><a class="dropdown-item" href="cate.html?id=`+ el.id + `">`+ el.name + `</a></li>
-                        `
-          });
-          $("#cateUL").html(str);
-        }
-      }
-    })
-  }
 }
 //------------------------------------------------------------------------------------
 function owl() {

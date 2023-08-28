@@ -108,9 +108,6 @@ function logout() {
                 window.location.reload();
             })
         }
-        else{
-          window.location.replace("index.html")
-        }
     });
 }
 //------------------------------------------------------------------------------------
