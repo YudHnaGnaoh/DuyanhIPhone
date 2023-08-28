@@ -1,0 +1,87 @@
+.iphone{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.cart>svg{
+    width: 50px;
+    stroke: white;
+    margin-right: 10px;
+    height: 40px;
+}
+
+.container{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    max-width: 1250px;
+}
+
+.card {
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 2px 2px lightgray;
+    border-radius: 10px;
+}
+
+button {
+    border-radius: 5px;
+}
+
+footer>div>.row>h4 {
+    margin-top: 13%;
+}
+
+.card-img-top {
+    max-height: 250px !important;
+    width: auto;
+    margin: 20px auto;
+}
+
+.card-title{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+th:hover {
+    color: aqua;
+}
+
+#productInfoTable {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #edd7fffa;
+}
+
+#content{
+    box-shadow: lightgray 2px 2px 2px 2px;
+    border-radius: 10px;
+}
+
+#sticky {
+    position: sticky;
+    top: 15px;
+}
+
+#content>p>span>span>img {
+width: 100%;
+}
+
+#owl {
+    box-shadow: lightgray 2px 2px 2px 2px;
+    border-radius: 7px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.hideContent {
+    height: 1000px;
+    overflow: hidden;
+}
+
+.showContent {
+    height: auto;
+}
+
+.hideclass{
+    display: none;
+}
