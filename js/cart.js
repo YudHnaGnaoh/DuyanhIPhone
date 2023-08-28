@@ -199,6 +199,7 @@ function loadCart() {
             },
         });
     }
+    else {location.replace("index.html")}
 }
 //------------------------------------------------------------------------------------
 function editQuantity() {
