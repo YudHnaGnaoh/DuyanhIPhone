@@ -104,7 +104,7 @@ function logout() {
                 icon: 'success',
                 title: 'Logout successfully'
             }).then(() => {
-                window.location.reload();
+                window.location.replace("index.html");
             })
         }
     });
@@ -154,6 +154,9 @@ $(".clearBtn").click(function (e) {
 });
 //------------------------------------------------------------------------------------
 function getData() {
+    if (!localStorage.getItem("token") || localStorage.getItem("token")==null){
+        window.location.replace("index.html");
+    }
     const params = new URLSearchParams(window.location.search);
     if (!params.has("id")) {
         window.location.replace("index.html")
