@@ -110,6 +110,9 @@ $(document).ready(function () {
           window.location.reload();
         })
       }
+      else{
+        window.location.replace("index.html")
+      }
     });
   }
   //------------------------------------------------------------------------------------
