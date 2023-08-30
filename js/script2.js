@@ -37,7 +37,6 @@ function login() {
           dataType: "JSON",
           success: function (res) {
             if (res.check == true) {
-              console.log(res.apitoken);
               localStorage.setItem("token", res.apitoken);
               const Toast = Swal.mixin({
                 toast: true,
@@ -200,6 +199,9 @@ function searchProduct() {
         }
       });
     } 
+    else if (name == null || name.length == 0) {
+      location.reload()
+    }
   });
 }
 //------------------------------------------------------------------------------------
