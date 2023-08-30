@@ -181,7 +181,7 @@ function loadCart() {
                         <td><button class="deleteBtn btn-sm btn-danger ms-2" data-id="` + el[0] + `">Xóa</button><td>
                     </tr>
                     `;
-                            sum += el[5];
+                            sum += el[6];
                         });
                         str += `
                     <tr style="font-weight: bold;font-size: 20px;">
