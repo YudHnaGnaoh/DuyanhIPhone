@@ -141,40 +141,42 @@
     <hr style="width: 80%; margin: auto" />
 
     <div class="container" style="display: flex">
-      <div class="col-md-3" style="display: flex">
-        <div class="row" style="height: 70px; margin: 0px auto">
-          <form class="d-flex">
-            <div class="col-md">
-              <input
-                class="form-control me-2"
-                type="number"
-                placeholder="Từ giá"
-                id="fromPrice"
-              />
-              <input
-                class="form-control me-2"
-                type="number"
-                placeholder="Đến giá"
-                id="toPrice"
-              />
-            </div>
-            <button class="btn btn-primary" type="submit" id="searchPriceBtn">Search</button>
-          </form>
+      <div class="row">
+        <div class="col-md-3" style="display: flex">
+          <div class="row" style="height: 70px; margin: 0px auto">
+            <form class="d-flex">
+              <div class="col-md">
+                <input
+                  class="form-control me-2"
+                  type="number"
+                  placeholder="Từ giá"
+                  id="fromPrice"
+                />
+                <input
+                  class="form-control me-2"
+                  type="number"
+                  placeholder="Đến giá"
+                  id="toPrice"
+                />
+              </div>
+              <button class="btn btn-primary" type="submit" id="searchPriceBtn">Search</button>
+            </form>
+          </div>
         </div>
-      </div>
-      <div class="col-md-9">
-        <div class="row" id="resultProduct">
-          <!--products here-->
-        </div>
-        <div class="row">
-          <nav
-            aria-label="Page navigation example"
-            style="display: flex; justify-content: end"
-          >
-            <ul class="pagination" id="pagination">
-              <!--pages here-->
-            </ul>
-          </nav>
+        <div class="col-md-9">
+          <div class="row" id="resultProduct">
+            <!--products here-->
+          </div>
+          <div class="row">
+            <nav
+              aria-label="Page navigation example"
+              style="display: flex; justify-content: end"
+            >
+              <ul class="pagination" id="pagination">
+                <!--pages here-->
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
     </div>
